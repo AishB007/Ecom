@@ -8,4 +8,4 @@ def index(request):
 # to view a product detail by its slug 
 def product_detail(request, slug):
     product = Product.objects.get(slug=slug)
-    return render(request, 'myapp/product_detail.html', {'product': product})
+    return render(request, 'myapp/product_detail.html', {'product': product,"stock_range": range(1,product.stock+1)})
