@@ -5,7 +5,7 @@
 {% for product in products %}
 <div class="grid justify-items-center m-2 p-2 border-2 border-gray-300 rounded-lg shadow-md">
     <img src="{{ product.image.url }}" alt="{{ product.name }}"> 
-    <a href="{% url 'product_detail' product.id %}" class="text-blue-600 hover:text-blue-800 font-bold">{{product.name}}</a>
+    <a href="{% url 'product_detail' product.slug %}" class="text-blue-600 hover:text-blue-800 font-bold">{{product.name}}</a>
     <p>{{ product.description }}</p>
     <p class="text-green-600 ">${{ product.price }}</p>
 </div>  
